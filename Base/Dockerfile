@@ -1,5 +1,6 @@
-FROM ubuntu:14.04
-MAINTAINER Cristian Baldi "bld.cris.96@gmail.com"
+FROM ubuntu:16.04
+# original image from Cristian Baldi, see https://github.com/crisbal/docker-torch-rnn
+MAINTAINER Jacopo Farina "jacopo1.farina@gmail.com"
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NONINTERACTIVE_SEEN true
@@ -29,7 +30,7 @@ ENV LUA_CPATH='/root/torch/install/lib/?.so;'$LUA_CPATH
 
 #torch-rnn and python requirements
 WORKDIR /root
-RUN git clone https://github.com/jcjohnson/torch-rnn && \
+RUN git clone https://github.com/YerevaNN/torch-rnn && \
     pip install -r torch-rnn/requirements.txt
 
 #Lua requirements
