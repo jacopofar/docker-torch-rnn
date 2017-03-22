@@ -1,12 +1,13 @@
 # docker-torch-rnn
 
-Docker images for using torch-rnn (https://github.com/jcjohnson/torch-rnn)
+Docker images for using torch-rnn (https://github.com/YerevaNN/torch-rnn)
 
 ## Available tags
 
 * `crisbal/torch-rnn:base`
     * Based on `ubuntu:14.04`
     * Allows usage of torch-rnn in CPU mode
+__TODO__ GPU support not present yet
 * `crisbal/torch-rnn:cuda6.5`
     * Based on `nvidia/cuda:6.5` 
     * Allows usage of torch-rnn in GPU mode (Cuda 6.5 support)
@@ -18,12 +19,12 @@ Docker images for using torch-rnn (https://github.com/jcjohnson/torch-rnn)
     
 ## How to
 
-More details here: https://github.com/jcjohnson/torch-rnn#usage
+More details here: https://github.com/YerevaNN/torch-rnn#usage
 
 ### CPU Only
 
 1. Start bash in the container
-    * `docker run --rm -ti crisbal/torch-rnn:base bash`
+    * `docker run --rm -ti jacopofar/torch-rnn:base bash`
 
 2. Preprocess the sample data
 
@@ -46,6 +47,7 @@ More details here: https://github.com/jcjohnson/torch-rnn#usage
 4. Sample
     * `th sample.lua -checkpoint cv/checkpoint_10000.t7 -length 2000 -gpu -1`
 
+__TODO__ GPU support not present yet
 ### CUDA
 
 1. Install nvidia-docker

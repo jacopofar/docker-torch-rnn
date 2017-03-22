@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:14.04
 # original image from Cristian Baldi, see https://github.com/crisbal/docker-torch-rnn
 MAINTAINER Jacopo Farina "jacopo1.farina@gmail.com"
 
